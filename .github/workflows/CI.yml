@@ -102,7 +102,8 @@ jobs:
           source /opt/ros/$ROS_DISTRO/setup.bash
           cd ~/catkin_ws
           catkin_make tests
-          rostest wall-e main_test.test     
+          source devel/setup.bash
+          
       - name: Run tests
         run: |
           source /opt/ros/$ROS_DISTRO/setup.bash
