@@ -99,9 +99,8 @@ jobs:
           
       - name: Tests
         run: |
+          source /opt/ros/$ROS_DISTRO/setup.bash
           cd ~/catkin_ws
-          # nothing uses linting here so this fails:
-          # "Error: With --no-deps, you must specify packages to build."
           catkin_make tests
           rostest wall-e main_test.test
           
