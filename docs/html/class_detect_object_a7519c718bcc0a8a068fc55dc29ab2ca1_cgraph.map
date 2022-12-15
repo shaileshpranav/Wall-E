@@ -1,0 +1,4 @@
+<map id="DetectObject::image_cb" name="DetectObject::image_cb">
+<area shape="rect" id="node1" title="callback function for receiving image published by Tiago" alt="" coords="5,13,184,39"/>
+<area shape="rect" id="node2" href="$class_detect_object.html#a97fff296abff7e7c6df6ac010e61cda3" title="Method to detect pre&#45;defined object." alt="" coords="232,5,388,47"/>
+</map>

@@ -1,0 +1,133 @@
+\hypertarget{class_detect_object}{}\doxysection{Detect\+Object Class Reference}
+\label{class_detect_object}\index{DetectObject@{DetectObject}}
+
+
+{\ttfamily \#include $<$detection.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_detect_object_aaed8e7d735e79be818a7d0d0f9ff0989}{Detect\+Object}} (ros\+::\+Node\+Handle $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_detect_object}{Detect\+Object}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_detect_object_a97fff296abff7e7c6df6ac010e61cda3}{detect\+\_\+object}} ()
+\begin{DoxyCompactList}\small\item\em Method to detect pre-\/defined object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_detect_object_a7519c718bcc0a8a068fc55dc29ab2ca1}{image\+\_\+cb}} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&)
+\begin{DoxyCompactList}\small\item\em callback function for receiving image published by Tiago \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_detect_object_a94188b23542fad7bab648810d459392e}{is\+\_\+object\+\_\+detected}}
+\begin{DoxyCompactList}\small\item\em Flag to check if the object is detected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 32 of file detection.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_detect_object_aaed8e7d735e79be818a7d0d0f9ff0989}\label{class_detect_object_aaed8e7d735e79be818a7d0d0f9ff0989}} 
+\index{DetectObject@{DetectObject}!DetectObject@{DetectObject}}
+\index{DetectObject@{DetectObject}!DetectObject@{DetectObject}}
+\doxysubsubsection{\texorpdfstring{DetectObject()}{DetectObject()}}
+{\footnotesize\ttfamily Detect\+Object\+::\+Detect\+Object (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle $\ast$}]{node\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \mbox{\hyperlink{class_detect_object}{Detect\+Object}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+handle} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file detection.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detect_object_aaed8e7d735e79be818a7d0d0f9ff0989_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_detect_object_a97fff296abff7e7c6df6ac010e61cda3}\label{class_detect_object_a97fff296abff7e7c6df6ac010e61cda3}} 
+\index{DetectObject@{DetectObject}!detect\_object@{detect\_object}}
+\index{detect\_object@{detect\_object}!DetectObject@{DetectObject}}
+\doxysubsubsection{\texorpdfstring{detect\_object()}{detect\_object()}}
+{\footnotesize\ttfamily bool Detect\+Object\+::detect\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to detect pre-\/defined object. 
+
+Function to be used for detecting the object to be collected. This will give out true if the object is detected while printing the x and y location for the object. otherwise it will return false.
+
+\begin{DoxyReturn}{Returns}
+true if the object is detected 
+
+false if the object is not detected
+
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file detection.\+cpp.
+
+\mbox{\Hypertarget{class_detect_object_a7519c718bcc0a8a068fc55dc29ab2ca1}\label{class_detect_object_a7519c718bcc0a8a068fc55dc29ab2ca1}} 
+\index{DetectObject@{DetectObject}!image\_cb@{image\_cb}}
+\index{image\_cb@{image\_cb}!DetectObject@{DetectObject}}
+\doxysubsubsection{\texorpdfstring{image\_cb()}{image\_cb()}}
+{\footnotesize\ttfamily void Detect\+Object\+::image\+\_\+cb (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+callback function for receiving image published by Tiago 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file detection.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detect_object_a7519c718bcc0a8a068fc55dc29ab2ca1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_detect_object_a94188b23542fad7bab648810d459392e}\label{class_detect_object_a94188b23542fad7bab648810d459392e}} 
+\index{DetectObject@{DetectObject}!is\_object\_detected@{is\_object\_detected}}
+\index{is\_object\_detected@{is\_object\_detected}!DetectObject@{DetectObject}}
+\doxysubsubsection{\texorpdfstring{is\_object\_detected}{is\_object\_detected}}
+{\footnotesize\ttfamily bool Detect\+Object\+::is\+\_\+object\+\_\+detected}
+
+
+
+Flag to check if the object is detected. 
+
+
+
+Definition at line 52 of file detection.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/wall-\/e/\mbox{\hyperlink{detection_8hpp}{detection.\+hpp}}\item 
+src/\mbox{\hyperlink{detection_8cpp}{detection.\+cpp}}\end{DoxyCompactItemize}

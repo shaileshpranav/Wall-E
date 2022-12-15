@@ -1,0 +1,8 @@
+cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_order include/wall-e/*.hpp src/*.cpp
+Done processing include/wall-e/detection.hpp
+Done processing include/wall-e/navigation.hpp
+Done processing include/wall-e/object_spawner.hpp
+Done processing src/detection.cpp
+Done processing src/navigation.cpp
+Done processing src/navigation_node.cpp
+Done processing src/object_spawner.cpp

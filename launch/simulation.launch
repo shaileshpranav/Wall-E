@@ -1,0 +1,57 @@
+<launch>
+  <env name="GAZEBO_MODEL_PATH"
+    value="$(find wall-e)/models:$(optenv GAZEBO_MODEL_PATH)" />
+  <arg name="world_name" default="$(find wall-e)/world/final_world.world" />
+  <arg name="gazebo_ros_output" default="screen"/>
+  <!-- load content of targets.yaml into the Parameter Server -->
+  <node name="simple_navigation_goals" pkg="wall-e" type="Navigation_node" output = "screen">
+  <rosparam file="$(find wall-e)/param/aruco_lookup.yaml" command="load" />
+  </node>
+
+  <node pkg="wall-e" name="objectSpawner" type="object_spawner_node" output="screen"/>
+
+  <!-- Launch gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+    <arg name="gui" value="true" />
+    <arg name="verbose" value="false" />
+    <arg name="debug" value="false" />
+    <arg name="output" value="$(arg gazebo_ros_output)" />
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_waffle.urdf.xacro laser_visual:=false" />
+
+  <!-- explorer robot-->
+  <group ns="explorer">
+    <param name="tf_prefix" value="explorer_tf" />
+    <include file="$(find wall-e)/launch/single_robot.launch" >
+      <arg name="init_pose" value="-x -4 -y 2.5 -z 0" />
+      <arg name="robot_name"  value="explorer" />
+    </include>
+  </group>
+
+  <!-- Navigation -->
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find wall-e)/maps/final_world.yaml">
+    <param name="frame_id" value="map" />
+  </node>
+
+
+  <!-- start amcl -->
+  <include file="$(find wall-e)/launch/explorer_amcl.launch" />
+
+  <!-- start move base-->
+  <include file="$(find wall-e)/launch/explorer_move_base.launch" />
+
+  <!-- launch rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wall-e)/rviz/rviz.rviz" />
+
+  <arg name="record_bag" default="false"/>
+  <group if="$(arg record_bag)">
+      <node pkg="rosbag" type="record" name="rosbag_recorder"
+            args="record -O $(find decluttering_domestic_robot)../results/my_bag -a"/>
+  </group>
+
+</launch>

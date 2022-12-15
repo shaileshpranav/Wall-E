@@ -1,0 +1,157 @@
+\hypertarget{object__spawner__test_8cpp}{}\doxysection{test/object\+\_\+spawner\+\_\+test.cpp File Reference}
+\label{object__spawner__test_8cpp}\index{test/object\_spawner\_test.cpp@{test/object\_spawner\_test.cpp}}
+
+
+Test file for \mbox{\hyperlink{class_object_spawner}{Object\+Spawner}} class.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Spawn\+Model.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Model\+State.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/wall-\/e/object\+\_\+spawner.\+hpp\char`\"{}}\newline
+Include dependency graph for object\+\_\+spawner\+\_\+test.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{object__spawner__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{object__spawner__test_8cpp_a5705e441062aaf07f95379c9ca22f618}{wait\+For\+Message}} (const bool \&\mbox{\hyperlink{object__spawner__test_8cpp_a83df816234091b3d00ffa0aa3f2c4b6d}{msg\+\_\+received}}, double timeout=5)
+\item 
+void \mbox{\hyperlink{object__spawner__test_8cpp_a18602938715106d468c903e4b7116be4}{pose\+\_\+cb}} (const gazebo\+\_\+msgs\+::\+Model\+State\+Const\+Ptr \&msg)
+\item 
+bool \mbox{\hyperlink{object__spawner__test_8cpp_a29a7e352c0dca9ab8c3c680b83de2e73}{spawn\+\_\+cb}} (gazebo\+\_\+msgs\+::\+Spawn\+Model\+::\+Request \&req, gazebo\+\_\+msgs\+::\+Spawn\+Model\+::\+Response \&res)
+\item 
+\mbox{\hyperlink{object__spawner__test_8cpp_ab275629c73bb4b82efe6a60ff0af5161}{T\+E\+ST}} (test\+\_\+object\+\_\+spawner\+\_\+class, test\+\_\+set\+\_\+object\+\_\+pose)
+\item 
+\mbox{\hyperlink{object__spawner__test_8cpp_a78135f4c83cbd859b3d5b5ecea2390da}{T\+E\+ST}} (test\+\_\+object\+\_\+spawner\+\_\+class, set\+\_\+object\+\_\+pose\+\_\+test)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{object__spawner__test_8cpp_a83df816234091b3d00ffa0aa3f2c4b6d}{msg\+\_\+received}} = false
+\item 
+gazebo\+\_\+msgs\+::\+Model\+State \mbox{\hyperlink{object__spawner__test_8cpp_a0254cab2db2c3bb0f5b49e5105a4a3f9}{pose\+\_\+msg}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test file for \mbox{\hyperlink{class_object_spawner}{Object\+Spawner}} class. 
+
+M\+IT License
+
+Copyright(c) 2021
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files(the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+
+\begin{DoxyAuthor}{Author}
+Driver\+: Hrushikesh B Navigator\+: Ameya Konkar 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/12-\/09
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{object__spawner__test_8cpp_a18602938715106d468c903e4b7116be4}\label{object__spawner__test_8cpp_a18602938715106d468c903e4b7116be4}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!pose\_cb@{pose\_cb}}
+\index{pose\_cb@{pose\_cb}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{pose\_cb()}{pose\_cb()}}
+{\footnotesize\ttfamily void pose\+\_\+cb (\begin{DoxyParamCaption}\item[{const gazebo\+\_\+msgs\+::\+Model\+State\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{object__spawner__test_8cpp_a29a7e352c0dca9ab8c3c680b83de2e73}\label{object__spawner__test_8cpp_a29a7e352c0dca9ab8c3c680b83de2e73}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!spawn\_cb@{spawn\_cb}}
+\index{spawn\_cb@{spawn\_cb}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{spawn\_cb()}{spawn\_cb()}}
+{\footnotesize\ttfamily bool spawn\+\_\+cb (\begin{DoxyParamCaption}\item[{gazebo\+\_\+msgs\+::\+Spawn\+Model\+::\+Request \&}]{req,  }\item[{gazebo\+\_\+msgs\+::\+Spawn\+Model\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{object__spawner__test_8cpp_a78135f4c83cbd859b3d5b5ecea2390da}\label{object__spawner__test_8cpp_a78135f4c83cbd859b3d5b5ecea2390da}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+object\+\_\+spawner\+\_\+class}]{,  }\item[{set\+\_\+object\+\_\+pose\+\_\+test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{object__spawner__test_8cpp_a78135f4c83cbd859b3d5b5ecea2390da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{object__spawner__test_8cpp_ab275629c73bb4b82efe6a60ff0af5161}\label{object__spawner__test_8cpp_ab275629c73bb4b82efe6a60ff0af5161}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+object\+\_\+spawner\+\_\+class}]{,  }\item[{test\+\_\+set\+\_\+object\+\_\+pose}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{object__spawner__test_8cpp_ab275629c73bb4b82efe6a60ff0af5161_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{object__spawner__test_8cpp_a5705e441062aaf07f95379c9ca22f618}\label{object__spawner__test_8cpp_a5705e441062aaf07f95379c9ca22f618}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!waitForMessage@{waitForMessage}}
+\index{waitForMessage@{waitForMessage}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{waitForMessage()}{waitForMessage()}}
+{\footnotesize\ttfamily bool wait\+For\+Message (\begin{DoxyParamCaption}\item[{const bool \&}]{msg\+\_\+received,  }\item[{double}]{timeout = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{object__spawner__test_8cpp_a83df816234091b3d00ffa0aa3f2c4b6d}\label{object__spawner__test_8cpp_a83df816234091b3d00ffa0aa3f2c4b6d}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!msg\_received@{msg\_received}}
+\index{msg\_received@{msg\_received}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{msg\_received}{msg\_received}}
+{\footnotesize\ttfamily bool msg\+\_\+received = false}
+
+
+
+Definition at line 45 of file object\+\_\+spawner\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{object__spawner__test_8cpp_a0254cab2db2c3bb0f5b49e5105a4a3f9}\label{object__spawner__test_8cpp_a0254cab2db2c3bb0f5b49e5105a4a3f9}} 
+\index{object\_spawner\_test.cpp@{object\_spawner\_test.cpp}!pose\_msg@{pose\_msg}}
+\index{pose\_msg@{pose\_msg}!object\_spawner\_test.cpp@{object\_spawner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{pose\_msg}{pose\_msg}}
+{\footnotesize\ttfamily gazebo\+\_\+msgs\+::\+Model\+State pose\+\_\+msg}
+
+
+
+Definition at line 46 of file object\+\_\+spawner\+\_\+test.\+cpp.
+

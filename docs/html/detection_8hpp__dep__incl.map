@@ -1,0 +1,9 @@
+<map id="include/wall&#45;e/detection.hpp" name="include/wall&#45;e/detection.hpp">
+<area shape="rect" id="node1" title="The header file for the detection part of the Robot." alt="" coords="357,5,563,32"/>
+<area shape="rect" id="node2" href="$navigation_8hpp.html" title="Header file for Navigation class." alt="" coords="154,80,369,107"/>
+<area shape="rect" id="node6" href="$detection_8cpp.html" title="Detection class." alt="" coords="393,80,527,107"/>
+<area shape="rect" id="node7" href="$detection__test_8cpp.html" title=" " alt="" coords="551,80,721,107"/>
+<area shape="rect" id="node3" href="$navigation_8cpp.html" title=" " alt="" coords="5,155,147,181"/>
+<area shape="rect" id="node4" href="$navigation__node_8cpp.html" title="Navigation Node." alt="" coords="171,155,351,181"/>
+<area shape="rect" id="node5" href="$navigation__test_8cpp.html" title=" " alt="" coords="376,155,555,181"/>
+</map>

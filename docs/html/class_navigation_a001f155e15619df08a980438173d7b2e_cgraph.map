@@ -1,0 +1,4 @@
+<map id="Navigation::Navigation" name="Navigation::Navigation">
+<area shape="rect" id="node1" title="Construct a new Navigation object." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node2" href="$class_navigation.html#a0627e7bc4535c0b11725b34af8e89b0a" title="Robot pose callback." alt="" coords="225,5,420,32"/>
+</map>

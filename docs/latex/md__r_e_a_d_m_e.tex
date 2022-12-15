@@ -1,0 +1,112 @@
+\href{https://opensource.org/licenses/MIT}{\texttt{ }} \href{https://github.com/shaileshpranav/Wall-E/actions/workflows/CI.yml}{\texttt{ }} \href{https://coveralls.io/github/shaileshpranav/Wall-E?branch=main}{\texttt{ }}
+
+{\bfseries{Course\+:}} Software Development for Robotics ~\newline
+ {\bfseries{Code\+:}} E\+N\+P\+M808X ~\newline
+ {\bfseries{Project No\+:}} Final Project {\bfseries{Semester\+:}} Fall 2022 ~\newline
+ {\bfseries{School\+:}} A. James Clark School of Engineering, University of Maryland ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Overview}\label{md__r_e_a_d_m_e_autotoc_md1}
+This project aims to design and simulate a trash collection robot. The robot will aim to be capable of detecting and collecting trash as well as navigating an unknown simulated office environment.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Authors}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/shaileshpranav}{\texttt{ Shailesh Pranav Rajendran}}
+\item \href{https://github.com/}{\texttt{ Harika Pendli}}
+\item \href{https://github.com/amancodeblast}{\texttt{ Aman Sharma}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MIT License}
+\DoxyCodeLine{}
+\DoxyCodeLine{Copyright (c) 2022 Shailesh Pranav Rajendran}
+\DoxyCodeLine{}
+\DoxyCodeLine{Permission is hereby granted, free of charge, to any person obtaining a copy}
+\DoxyCodeLine{of this software and associated documentation files (the "Software"), to deal}
+\DoxyCodeLine{in the Software without restriction, including without limitation the rights}
+\DoxyCodeLine{to use, copy, modify, merge, publish, distribute, sublicense, and/or sell}
+\DoxyCodeLine{copies of the Software, and to permit persons to whom the Software is}
+\DoxyCodeLine{furnished to do so, subject to the following conditions:}
+\DoxyCodeLine{}
+\DoxyCodeLine{The above copyright notice and this permission notice shall be included in all}
+\DoxyCodeLine{copies or substantial portions of the Software.}
+\DoxyCodeLine{}
+\DoxyCodeLine{THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}
+\DoxyCodeLine{IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,}
+\DoxyCodeLine{FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE}
+\DoxyCodeLine{AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER}
+\DoxyCodeLine{LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,}
+\DoxyCodeLine{OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}
+\DoxyCodeLine{SOFTWARE.}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{U\+M\+L Diagram}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Docments Deliverables}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item \href{assests/Final_808X_proposal.pdf}{\texttt{ Project Proposal}}
+\item \href{https://docs.google.com/spreadsheets/d/1XeTO0CUpv6UCy624VYsgb07ksButBDdTZqp0TRLlJ4I/edit?usp=sharing}{\texttt{ A\+IP Sheet}}
+\item \href{https://docs.google.com/document/d/11cLR52aRCAyYz1M3-HGVqCmaej5kUB9rt5mzMqc03yA/edit?usp=sharing}{\texttt{ Sprint Sheet}}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Dependencies}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item \mbox{[}Ubuntu 20.\+04\mbox{]}()
+\item \href{http://wiki.ros.org/melodic/Installation/Ubuntu}{\texttt{ R\+OS Noetic}}
+\item \href{http://gazebosim.org/}{\texttt{ Gazebo}}
+\item \href{https://github.com/opencv/opencv}{\texttt{ Opencv}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Design and Development Process}\label{md__r_e_a_d_m_e_autotoc_md7}
+We will be making use of E\+SC methodology for the initial design process which is by extraction of significant concepts. We identified the flow of the future program. Our software team worked on this project through iterative software evolution and service processes. Agile Development Process has been used in the development process with Test-\/\+Driven Development.
+
+Being a team of three programmers, we have decided to adopt pair programming roles\+:driver and navigator, along with a design keeper role.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{Build}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Create a workspace 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -\/p \string~/ros\_ws/src}
+\DoxyCodeLine{cd \string~/ros\_ws/src}
+\end{DoxyCode}
+
+\item Clone the repository 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/shaileshpranav/Wall-\/E.git}
+\end{DoxyCode}
+
+\item Install dependencies 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd Wall-\/e}
+\DoxyCodeLine{. install.bash}
+\end{DoxyCode}
+
+\item Build the workspace 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd \string~/ros\_ws/src}
+\DoxyCodeLine{catkin\_make}
+\DoxyCodeLine{source devel/setup.bash}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Launch}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Launch the simulation using Gazebo and Rviz 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch wall-\/e simulation.launch}
+\end{DoxyCode}
+
+\item To launch S\+L\+AM pipeline 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch wall-\/e start\_mapping.launch}
+\end{DoxyCode}
+
+\item To Launch the simulation and to record a bag file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch wall-\/e simulation.launch record\_bag:=true}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Tests}\label{md__r_e_a_d_m_e_autotoc_md10}
+To Build the Tests using catkin\+\_\+make run following command in your catkin workspace. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin\_make tests}
+\end{DoxyCode}
+
+
+To run the test execute following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rostest wall-\/e main\_test.test}
+\end{DoxyCode}
+ 

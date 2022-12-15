@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node2" href="$class_navigation.html#a1f8765347a100302cb36f8baf303ed7b" title="Get the object pose." alt="" coords="108,5,315,32"/>
+<area shape="rect" id="node3" href="$class_navigation.html#a833a21be20671401647460b2ad70537a" title="Set the goal positions for each room." alt="" coords="115,56,307,83"/>
+<area shape="rect" id="node4" href="$class_navigation.html#a0a807454e88d30fde151c5b165d93633" title="Robot spins to scan the room." alt="" coords="122,107,301,133"/>
+</map>

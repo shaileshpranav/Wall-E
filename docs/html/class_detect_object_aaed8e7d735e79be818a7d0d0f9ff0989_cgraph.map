@@ -1,0 +1,5 @@
+<map id="DetectObject::DetectObject" name="DetectObject::DetectObject">
+<area shape="rect" id="node1" title="Constructor for the DetectObject class." alt="" coords="5,13,205,39"/>
+<area shape="rect" id="node2" href="$class_detect_object.html#a7519c718bcc0a8a068fc55dc29ab2ca1" title="callback function for receiving image published by Tiago" alt="" coords="253,13,432,39"/>
+<area shape="rect" id="node3" href="$class_detect_object.html#a97fff296abff7e7c6df6ac010e61cda3" title="Method to detect pre&#45;defined object." alt="" coords="480,5,636,47"/>
+</map>
