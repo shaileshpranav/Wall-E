@@ -14,7 +14,7 @@
 
 Acme Robotics Inc. is a private company set to launch a trash collection robot. The robot is to be deployed in an office or any closed environment. It’s purpose is to detect and collect trash on the floor. So we the R&D team at Acme Robotics Inc., have come up with the first version of "Wall-E". It is capable of detecting and collecting trash as well as navigating in unknown closed environment. It identifies, moves towards the trash and collects it. The collected trash will then be transported to a common location for proper disposal.
 
-
+[View the demo here](https://www.youtube.com/watch?v=LrZ1n-DFPSo&t=39s)
 ## Authors
 
 Our R&D team at Acme Robotics Inc. working on Wall-E are:
